@@ -1,5 +1,12 @@
-body {
-    background-color: #222d32;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:hover,a:visited,a:link,a:active {
+    text-decoration: none;
 }
 
 .mt150 {
@@ -8,4 +15,104 @@ body {
 
 .container h3 {
     text-align: center;
+}
+
+/* 公用左边侧边栏 */
+.lt_aside {
+    width: 180px;
+    height: 100%;
+    background-color: #222d32;
+    position: absolute;
+}
+
+/* 品牌区域 */
+.lt_aside .brand {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #367fa9;
+}
+
+.lt_aside .brand >a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* 用户信息区域 */
+.lt_aside .user {
+    padding: 30px 20px;
+}
+
+.lt_aside .user >img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.lt_aside .user >span {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* 导航区域 */
+.nav {
+
+}
+
+.nav >ul {
+
+}
+
+.nav >ul >li {
+    line-height: 40px;
+}
+
+.nav >ul >li >a {
+    display: block;
+    height: 40px;    
+    padding-left: 30px;
+    color: #ddd;
+    border: 3px solid transparent;
+}
+
+.nav >ul >li.now {
+    display: block;
+}
+.nav >ul >li .child >a {
+    display: block;
+    padding-left: 60px;
+    color: #ddd;
+}
+
+/* 右边内容部分 */
+.lt_main {
+    padding-left: 180px;
+}
+
+/* 顶部通栏 */
+.lt_main .topbar {
+    height: 50px;
+    background-color: #3c8dbc;
+    padding: 0px 15px;
+    line-height: 50px;
+}
+
+.lt_main .topbar >a {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* 内容区域 */
+.container-fluid .echars_left {
+    width: 45%;
+    height: 400px;
+}
+.container-fluid .breadcrumb {
+    margin: 20px 0;
+}
+.container-fluid .echars_right {
+    width: 45%;
+    height: 400px;
 }

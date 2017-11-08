@@ -56,6 +56,11 @@ $(function(){
             type: 'post',
             data: $form.serialize(),
             success: function(data){
+
+                if(data.success){
+                    //跳转到首页
+                    location.href = "index.html";
+                  }
                 //判断帐号密码是否正确
                 //如果错了 可以updateStatus 手动的把校验状态改为失败
                 //有三个参数
