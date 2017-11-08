@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 表单验证插件样式 -->
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
@@ -23,19 +24,19 @@
                         <div class="form-group">
                             <label for="username" class="col-sm-3 control-label">用户名</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="username" placeholder="请输入用户名">
+                                <input type="text" name="username" class="form-control" id="username" placeholder="请输入用户名">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="col-sm-3 control-label">密码</label>
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                                <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="reset" class="btn btn-default pull-left">重置</button>
-                                <button type="submit" class="btn btn-default pull-right">登录</button>
+                                <button type="submit" class="btn btn-primary pull-right">登录</button>
                             </div>
                         </div>
                     </form>
@@ -47,6 +48,8 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 表单验证插件 -->
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
