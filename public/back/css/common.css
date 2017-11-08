@@ -23,6 +23,12 @@ a:hover,a:visited,a:link,a:active {
     height: 100%;
     background-color: #222d32;
     position: absolute;
+    left: 0px;
+    transition: all 0.5s;
+}
+
+.lt_aside.now {
+    left: -180px;
 }
 
 /* 品牌区域 */
@@ -57,19 +63,12 @@ a:hover,a:visited,a:link,a:active {
 }
 
 /* 导航区域 */
-.nav {
-
-}
-
-.nav >ul {
-
-}
 
 .nav >ul >li {
-    line-height: 40px;
+    line-height: 40px;  
 }
 
-.nav >ul >li >a {
+.nav >ul >li a {
     display: block;
     height: 40px;    
     padding-left: 30px;
@@ -77,9 +76,20 @@ a:hover,a:visited,a:link,a:active {
     border: 3px solid transparent;
 }
 
-.nav >ul >li.now {
+.nav >ul >li a.now {
+    border-left-color: #3c8dbc;
+    background: #1d1f21;
+    color: #fff;
+}
+
+.nav >ul >li .child {
+    display: none;
+}
+
+.nav >ul >li .child.now {
     display: block;
 }
+
 .nav >ul >li .child >a {
     display: block;
     padding-left: 60px;
@@ -88,7 +98,13 @@ a:hover,a:visited,a:link,a:active {
 
 /* 右边内容部分 */
 .lt_main {
+    /* overflow: hidden; */
     padding-left: 180px;
+    transition: all 0.5s;
+}
+
+.lt_main.now {
+    padding-left: 0px;
 }
 
 /* 顶部通栏 */
@@ -97,6 +113,8 @@ a:hover,a:visited,a:link,a:active {
     background-color: #3c8dbc;
     padding: 0px 15px;
     line-height: 50px;
+    /* 触发nfc 不要影响到别的盒子 */
+    /* overflow: hidden; */
 }
 
 .lt_main .topbar >a {
@@ -105,6 +123,9 @@ a:hover,a:visited,a:link,a:active {
 }
 
 /* 内容区域 */
+/* .container-fluid {
+    overflow: hidden;
+} */
 .container-fluid .echars_left {
     width: 45%;
     height: 400px;

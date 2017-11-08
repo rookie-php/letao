@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>后台管理系统-首页</title>
+    <title>后台管理系统-用户</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 表单验证插件样式 -->
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <!-- 使用进度条插件 -->
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./css/common.css">
-    <!-- 引入报表插件 -->
-    <script src="./lib/echarts/echarts.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +30,7 @@
         <div class="nav">
             <ul>
                 <li>
-                    <a href="user.html">
+                    <a href="user.html" class="now">
                         <i class="glyphicon glyphicon-user"></i>
                         用户管理
                     </a>
@@ -74,17 +72,8 @@
                 <li>
                     <a href="index.html">管理系统</a>
                 </li>
-                <li class="active">首页</li>
+                <li class="active">用户管理</li>
             </ol>
-            <!-- 使用报表插件 -->
-            <!-- 左边部分 -->
-            <div class="echars_left pull-left">
-
-            </div>
-            <!-- 右边部分 -->
-            <div class="echars_right pull-right">
-
-            </div>
         </div>
     </div>
     <!-- 点击退出 提示的模态框 -->
@@ -118,7 +107,6 @@
     <script src="./lib/nprogress/nprogress.js"></script>
 
     <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
 </body>
 
 </html>
