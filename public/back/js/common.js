@@ -23,7 +23,7 @@ $(function () {
             url: '/employee/checkRootLogin',
             type: 'get',
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 //判断是否登录 
                 if(data.error===400){
                     alert('请先登录');
@@ -55,7 +55,16 @@ $(function () {
     // 给确定按钮一个点击事件
     $('.btn_logout_sure').on('click', function () {
         // console.log(1244);
-        window.location.href = "login.html";
+        //发送ajax请求 让服务器删除session
+        $.ajax({
+            url: '/employee/employeeLogout',
+            success: function(data){
+                // console.log(data);
+                if(data.success){
+                    window.location.href = "login.html";
+                }
+            }
+        })
 
     })
 })
