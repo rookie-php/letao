@@ -72,10 +72,31 @@
                 <li>
                     <a href="index.html">管理系统</a>
                 </li>
-                <li class="active">分类管理</li>                
+                <li class="active">分类管理</li>
                 <li class="active">一级分类</li>
             </ol>
+            <button class="btn btn-md btn-default btn_add">添加分类</button>
+            <!-- 内容部分 表格区域-->
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td width="20%">序号</td>
+                        <td width="80%">分类名称</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 挖坑区域 -->
+                </tbody>
+            </table>
+
+            <!-- 分页插件 -->
+            <div class="text-right">
+                <ul id="page">
+
+                </ul>
+            </div>
         </div>
+    </div>
     </div>
     <!-- 点击退出 提示的模态框 -->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal">
@@ -88,7 +109,10 @@
                     <h4 class="modal-title">温馨提示</h4>
                 </div>
                 <div class="modal-body">
-                    <p class="text-danger"><i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
+                    <p class="text-danger">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        您确定要退出后台管理系统吗？
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -100,14 +124,55 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-    <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <!-- 表单验证插件 -->
-    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-    <!-- 使用进度条插件 -->
-    <script src="./lib/nprogress/nprogress.js"></script>
 
-    <script src="./js/common.js"></script>
+    <!-- 点击退出 提示的模态框 -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="addModal">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">添加分类</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 利用id跟form表单外面的按钮绑定form -->
+                       <form action="" id="form">
+                           <div class="form-group">
+                                <input type="text" class="form-control" name="categoryName" placeholder="请输入一级分类名称">
+                           </div>
+                       </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" form="form" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary btn_add_sure" form="form">确定</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- 定义模版 -->
+        <script type="text/html" id="Tmp-list">
+            {{each rows v i}}
+            <tr>
+                <td>{{(page-1)*size+i+1}}</td>
+                <td>{{v.categoryName}}</td>
+            </tr>
+            {{/each}}
+        </script>
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+        <!-- 表单验证插件 -->
+        <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+        <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+        <!-- 使用进度条插件 -->
+        <script src="./lib/nprogress/nprogress.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/categoryFirst.js"></script>
 </body>
 
 </html>

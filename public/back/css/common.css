@@ -142,3 +142,8 @@ a:hover,a:visited,a:link,a:active {
     width: 45%;
     height: 400px;
 }
+
+/* 添加分类按钮 */
+.btn_add {
+    margin-bottom: 20px;
+}
