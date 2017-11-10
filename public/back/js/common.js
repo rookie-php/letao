@@ -44,6 +44,7 @@ $(function () {
         // console.log(124);
         $('.lt_aside').toggleClass('now');
         $('.lt_main').toggleClass('now');
+        $('.topbar').toggleClass('now');
     })
 
     // 点击退出按钮 弹出模态框

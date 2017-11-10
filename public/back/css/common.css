@@ -27,9 +27,10 @@ a:hover,a:visited,a:link,a:active {
     width: 180px;
     height: 100%;
     background-color: #222d32;
-    position: absolute;
+    position: fixed;
     left: 0px;
     transition: all 0.5s;
+    z-index: 10;
 }
 
 .lt_aside.now {
@@ -116,10 +117,18 @@ a:hover,a:visited,a:link,a:active {
 .lt_main .topbar {
     height: 50px;
     background-color: #3c8dbc;
-    padding: 0px 15px;
+    padding: 0px 15px 0px 200px;
     line-height: 50px;
+    position: fixed;
+    left: 0;
+    width: 100%;
     /* 触发nfc 不要影响到别的盒子 */
     /* overflow: hidden; */
+    transition: all 0.5s;
+}
+
+.lt_main .topbar.now {
+    padding-left: 15px;
 }
 
 .lt_main .topbar >a {
