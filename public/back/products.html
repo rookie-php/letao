@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>后台管理系统-商品</title>
+    <title>后台管理系统-分类</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 表单验证插件样式 -->
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
@@ -40,7 +40,7 @@
                         <i class="glyphicon glyphicon-list"></i>
                         分类管理
                     </a>
-                    <div class="child">
+                    <div class="child now">
                         <a href="categoryFirst.html">一级导航</a>
                         <a href="categorySecond.html">二级导航</a>
                     </div>
@@ -72,9 +72,37 @@
                 <li>
                     <a href="index.html">管理系统</a>
                 </li>
-                <li class="active">商品管理</li>
+                <li class="active">分类管理</li>
+                <li class="active">二级分类</li>
             </ol>
+            <button class="btn btn-md btn-default btn_add">添加分类</button>
+            <!-- 内容部分 表格区域-->
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td width="5%">序号</td>
+                        <td width="25%">商品名称</td>
+                        <td width="25%">商品描述</td>
+                        <td width="10%">商品库存</td>
+                        <td width="10%">商品尺寸</td>
+                        <td width="10%">商品状态</td>
+                        <td width="15%">操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 挖坑区域 -->
+
+                </tbody>
+            </table>
+
+            <!-- 分页插件 -->
+            <div class="text-right">
+                <ul id="page">
+
+                </ul>
+            </div>
         </div>
+    </div>
     </div>
     <!-- 点击退出 提示的模态框 -->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal">
@@ -87,7 +115,10 @@
                     <h4 class="modal-title">温馨提示</h4>
                 </div>
                 <div class="modal-body">
-                    <p class="text-danger"><i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
+                    <p class="text-danger">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        您确定要退出后台管理系统吗？
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -99,14 +130,119 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+
+    <!-- 点击添加分类 提示的模态框 -->
+    <div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" id="addModal">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">添加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- 利用id跟form表单外面的按钮绑定form -->
+                    <form action="" id="form">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="dropdown_text">请选择二级分类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <input type="hidden" name="brandId" id="brandId">
+                            <ul class="dropdown-menu">
+                                <!-- 挖坑 -->
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="proName" placeholder="请输入商品名称">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品描述"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="num" placeholder="请输入商品库存">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="price" placeholder="请输入商品价格">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="oldPrice" placeholder="请输入商品原价">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="size" placeholder="请输入商品尺码">
+                        </div>
+                        <div class="form-group">
+                            <div class="file_box">
+                                <button class="btn btn-default">上传图片</button>
+                                <!-- 
+                                    文件上传插件 三个必要的属性
+                                        type:file name:pic1 data-url:url
+                                 -->
+                                <input type="file" id="fileupload" name="pic1" data-url="/product/addProductPic" multiple>
+                            </div>
+                        </div>
+                        <div class="form-group img">
+                            <!-- <img src="./images/none.png" data-addr="" data-name="" width="100" height="100" alt="">
+                            <img src="./images/none.png" width="100" height="100" alt="">
+                            <img src="./images/none.png" width="100" height="100" alt=""> -->
+                            <input type="hidden" name="productLogo" id="productLogo">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn_cancle" form="form" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary btn_add_sure" form="form">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- 定义模版 -->
+    <script type="text/html" id="Tmp-list">
+        {{each rows v i}}
+        <tr>
+            <td width="5%">{{(page-1)*size+i+1}}</td>
+            <td width="25%">{{v.proName}}</td>
+            <td width="25%">{{v.proDesc}}</td>
+            <td width="10%">{{v.num}}</td>
+            <td width="10%">{{v.size}}</td>
+            <td width="10%">{{v.statu==1?'已上架':'已下架'}}</td>
+            <td width="15%">
+                {{if v.statu==0}}
+                <button class="btn btn-success btn-sm">上架</button>
+                {{else if v.statu==1}}
+                <button class="btn btn-danger btn-sm">下架</button>
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <!-- 定义模版 -->
+    <script type="text/html" id="Tmp-select">
+        {{each rows v i}}
+        <li>
+            <a href="javascript:;" data-id="{{v.id}}">{{v.categoryName}}</a>
+        </li>
+        {{/each}}
+    </script>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 表单验证插件 -->
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <!-- 使用进度条插件 -->
     <script src="./lib/nprogress/nprogress.js"></script>
-
+    <!-- 文件上传插件 基于jquery -->
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/products.js"></script>
 </body>
 
 </html>
