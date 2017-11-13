@@ -192,7 +192,9 @@ $(function () {
         // console.log(data); 
         // brandId=18&proName=1&proDesc=23&num=22&price=23&oldPrice=23&size=22-22&productLogo=
         var imgArr = $('form img');
-        data += '&picName1='+imgArr[0].dataset.name+'&picAddr1'+imgArr[0].dataset.addr;
+        data += '&picName1='+imgArr[0].dataset.name+'&picAddr1='+imgArr[0].dataset.addr;
+        data += '&picName2='+imgArr[1].dataset.name+'&picAddr2='+imgArr[1].dataset.addr;
+        data += '&picName3='+imgArr[2].dataset.name+'&picAddr3='+imgArr[2].dataset.addr;
         // console.log(data);
         //发送ajax
         $.ajax({

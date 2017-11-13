@@ -137,9 +137,9 @@ a:hover,a:visited,a:link,a:active {
 }
 
 /* 内容区域 */
-/* .container-fluid {
-    overflow: hidden;
-} */
+.container-fluid {
+    padding-top: 45px;
+}
 .container-fluid .echars_left {
     width: 45%;
     height: 400px;

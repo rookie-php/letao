@@ -60,6 +60,7 @@ $(function(){
             page:currPage,
             pageSize:pageSize
         },order),function(data){
+            console.log(data);
             /*渲染商品列表*/
             if(currPage == 1){
                 $('.lt_product').html(template('productTpl',data));

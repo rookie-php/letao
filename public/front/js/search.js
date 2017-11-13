@@ -80,6 +80,8 @@ $(function () {
         render();
         // 把输入框清空
         $('.lt-search input').val('');
+        // 跳转到搜索结果页面
+        location.href = "searchList.html?key="+content;
     })
 
 })
