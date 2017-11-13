@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/product.css" />
+</head>
+
+<body>
+    <div class="lt-container">
+        <!-- 顶部通栏 -->
+        <div class="lt-header">
+            <a href="javascript:history.go(-1);" class="header-l">
+                <i class="mui-icon mui-icon-arrowleft"></i>
+            </a>
+            <h4>商品详情</h4>
+            <a href="javascript:location.reload();" class="header-r">
+                <i class="mui-icon mui-icon-reload"></i>
+            </a>
+        </div>
+        <!-- 内容区域-->
+        <div class="lt-content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <!-- 挖个巨坑 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 尾部部分 -->
+        <div class="cart">
+            <a href="#">去购物车</a>
+            <div class="mui-pull-right">
+                <button class="mui-btn mui-btn-danger">加入购物车</button>
+                <button class="mui-btn mui-btn-warning">立即购买</button>
+            </div>
+        </div>
+    </div>
+    <!-- 模版区域 -->
+    <script type="text/html" id="Tmp">
+           <!-- 轮播图-->
+           <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="./images/brand2.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="./images/brand1.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="./images/brand2.png" />
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="./images/brand1.png" />
+                    </a>
+                </div>
+            </div>
+            <!-- 小圆点-->
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <!-- 产品名字 -->
+        <div class="proName">
+            <strong class="mui-ellipsis-2"> 
+               {{proName}}
+            </strong>
+        </div>
+        <!-- 产品价格 -->
+        <div class="proPrice">
+            价格:
+            <span class="price">&yen;{{price}}</span>
+            <span class="oldPrice">&yen;{{oldPrice}}</span>
+        </div>
+        <!-- 尺码 -->
+        <div class="proSize">
+            尺码:
+            <%for(var i=size.split('-')[0];i<size.split('-')[1];i++){%>
+            <span><%=i%></span>
+            <% }%>
+        </div>
+        <!-- 库存数量 -->
+        <div class="proNum">
+            数量:
+            <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{num}}">
+                <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                <input id="test" class="mui-input-numbox" type="number" value="1">
+                <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+            </div>
+            <span>库存数量:{{num}}双</span>
+        </div>
+        <!-- 产品描述 -->
+        <div class="proDesc">
+            详情:{{proDesc}}
+        </div>
+    </script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>

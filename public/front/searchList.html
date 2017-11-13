@@ -36,10 +36,10 @@
                         <a href="#">上架时间
                             <span class="fa fa-angle-down"></span>
                         </a>
-                        <a href="#">价格
+                        <a href="#" data-type="price">价格
                             <span class="fa fa-angle-down"></span>
                         </a>
-                        <a href="#">库存
+                        <a href="#" data-type="num">库存
                             <span class="fa fa-angle-down"></span>
                         </a>
                         <a href="#">折扣
@@ -51,6 +51,7 @@
                     <div class="product">
                         <ul class="mui-clearfix">
                             <!-- 挖个坑 -->
+                            <div class="loading"></div>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +91,7 @@
     <script type="text/html" id="Tmp">
         {{each data v i}}
         <li>
-            <a href="#">
+            <a href="product.html?id={{v.id}}">
                 <img src="{{v.pic[0].picAddr}}" alt="" />
                 <p class="title mui-ellipsis-2">{{v.proName}}</p>
                 <p class="price">

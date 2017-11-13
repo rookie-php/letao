@@ -57,6 +57,10 @@ $(function () {
 
     // 添加操作
     $('.btn-search').on('click', function () {
+        if($('.lt-search input').val()==''){
+            mui.toast('请输入内容',{ duration:'long', type:'div' });
+            return false; 
+        }
         //获取搜索内容 trim() 忽略前后空格
         var content = $('.lt-search input').val().trim();
         // console.log(content);

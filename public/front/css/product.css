@@ -1,0 +1,67 @@
+/* 尾部部分 */
+.cart {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 20px;
+}
+
+.cart button {
+    margin-top: 10px;
+}
+
+.cart a {
+    font-size: 14px;
+}
+
+/* 产品名字 */
+.proName {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/* 产品价格 */
+.proPrice {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.proPrice .price {
+    color: red;
+}
+
+.proPrice .oldPrice {
+    font-size: 12px;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+/* 产品尺码 */
+.proSize {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.proSize span {
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: #eee;
+    line-height: 36px;
+}
+
+/* 产品库存 */
+.proNum {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.proNum  span {
+    color: #bbb;
+    font-size: 12px;
+}
+
+/* 产品描述 */
+.proDesc {
+    padding: 10px;
+    border-top: 1px solid #ccc
+}

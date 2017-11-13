@@ -109,10 +109,12 @@ p {
 
 .product li a img {
     width: 100%;
+    height: 138px;
 }
 
 .product li a .title {
     padding: 0 5px;
+    height: 39px;
 }
 
 .product li a .price span{

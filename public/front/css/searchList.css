@@ -15,3 +15,29 @@
     text-align: center;
     color: #333;
 }
+
+.lt-sort a.now {
+    color: darkorange;
+}
+
+/* 加载条 */
+.loading {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #069;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 220px;    
+    animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: translate(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%) rotate(360deg);
+    }
+}

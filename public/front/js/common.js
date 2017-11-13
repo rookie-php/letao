@@ -13,7 +13,7 @@ mui('.mui-slider').slider({
 var tools = {
     getParameter: function () {
         //获取地址栏参数
-        var urlParameter = location.search;
+        var urlParameter = decodeURI(location.search);
         //删除最前的?
         var newParameter = urlParameter.slice(1);
         //把字符串分割成数组
