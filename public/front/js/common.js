@@ -28,6 +28,9 @@ var tools = {
     },
     getParameterVal: function(key){
         return this.getParameter()[key];
+    },
+    checkLogin: function(data){
+        
     }
 }
 

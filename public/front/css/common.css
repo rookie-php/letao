@@ -164,3 +164,11 @@ p {
     color: #fff;
     font-size: 12px;
 }
+
+.lt-footer li.now a {
+    color: darkorange;
+}
+
+.lt-footer li.now a p {
+    color: darkorange;
+}

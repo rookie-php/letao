@@ -49,6 +49,10 @@
     line-height: 36px;
 }
 
+.proSize span.now {
+    background-color: #069;
+}
+
 /* 产品库存 */
 .proNum {
     padding: 10px;

@@ -1,0 +1,17 @@
+.lt-content img {
+    width: 42px;
+    height: 42px;
+}
+
+.lt-content .user-info {
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.lt-content .logout {
+    padding: 10px;
+}
+
+.lt-content .logout button {
+    width: 100%;
+}

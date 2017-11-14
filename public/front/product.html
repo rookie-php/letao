@@ -36,9 +36,9 @@
 
         <!-- 尾部部分 -->
         <div class="cart">
-            <a href="#">去购物车</a>
+            <a href="shopcart.html">去购物车</a>
             <div class="mui-pull-right">
-                <button class="mui-btn mui-btn-danger">加入购物车</button>
+                <button class="mui-btn mui-btn-danger btn-add-car">加入购物车</button>
                 <button class="mui-btn mui-btn-warning">立即购买</button>
             </div>
         </div>
@@ -50,29 +50,27 @@
             <div class="mui-slider-group mui-slider-loop">
                 <div class="mui-slider-item mui-slider-item-duplicate">
                     <a href="#">
-                        <img src="./images/brand2.png" />
+                        <img src="{{pic[pic.length-1].picAddr}}" />
                     </a>
                 </div>
+                {{each pic v i}}
                 <div class="mui-slider-item">
                     <a href="#">
-                        <img src="./images/brand1.png" />
+                        <img src="{{v.picAddr}}" />
                     </a>
                 </div>
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="./images/brand2.png" />
-                    </a>
-                </div>
+                {{/each}}
                 <div class="mui-slider-item mui-slider-item-duplicate">
                     <a href="#">
-                        <img src="./images/brand1.png" />
+                        <img src="{{pic[0].picAddr}}" />
                     </a>
                 </div>
             </div>
             <!-- 小圆点-->
             <div class="mui-slider-indicator">
-                <div class="mui-indicator mui-active"></div>
-                <div class="mui-indicator"></div>
+                {{each pic v i}}
+                <div class="mui-indicator {{i==0?'mui-active':''}}"></div>
+                {{/each}}
             </div>
         </div>
         <!-- 产品名字 -->

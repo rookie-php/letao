@@ -37,7 +37,7 @@ $(function () {
 
     render();
 
-    // 给搜索按钮注册点击事件
+    // 给搜索按钮注册点击事件  其实此处也应该添加搜索记录的
     $('.btn-search').on('click', function () {
         if($('.lt-search input').val()==''){
             mui.toast('请输入内容',{ duration:'long', type:'div' });

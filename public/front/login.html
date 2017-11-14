@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <title>乐淘商城-分类</title>
+    <title>乐淘商城-登录</title>
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css" />
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/category.css" />
+    <link rel="stylesheet" href="./css/login.css" />
 </head>
 
 <body>
@@ -19,31 +19,24 @@
             <a href="javascript:history.go(-1);" class="header-l">
                 <i class="mui-icon mui-icon-arrowleft"></i>
             </a>
-            <h4>乐淘分类</h4>
-            <a href="search.html" class="header-r">
-                <i class="fa fa-search"></i>
-            </a>
+            <h4>登录</h4>
         </div>
         <!-- 内容区域-->
         <div class="lt-content">
-            <!-- 左侧导航 -->
-            <div class="lt-content-l">
-                <div class="mui-scroll-wrapper">
-                    <ul class="mui-scroll">
-                        <!-- 菜单具体展示内容 -->
-                        <!-- 挖个坑 -->
-                    </ul>
+            <form class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>用户名</label>
+                    <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
                 </div>
-            </div>
-            <!-- 右侧内容 -->
-            <div class="lt-content-r">
-                <div class="mui-scroll-wrapper">
-                    <ul class="mui-scroll mui-clearfix">
-                        <!-- 菜单具体展示内容 -->
-                        <!-- 挖个坑 -->
-                    </ul>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
                 </div>
-            </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary btn-login">登录</button>
+                    <button type="reset" class="mui-btn mui-btn-danger">重置</button>
+                </div>
+            </form>
         </div>
         <!-- 页脚部分 -->
         <div class="lt-footer">
@@ -54,7 +47,7 @@
                         <p>首页</p>
                     </a>
                 </li>
-                <li class="now">
+                <li>
                     <a href="category.html">
                         <i class="fa fa-bars"></i>
                         <p>分类</p>
@@ -75,30 +68,11 @@
             </ul>
         </div>
     </div>
-    <!-- 模版区域 -->
-    <script type="text/html" id="Tmp">
-        {{each rows v i }}
-        <li data-id="{{v.id}}">
-            <a href="javascript:;">{{v.categoryName}}</a>
-        </li>
-        {{/each}}
-    </script>
-
-    <script type="text/html" id="Tmp2">
-        {{each rows v i}}
-        <li>
-            <a href="#">
-                <img src="{{v.brandLogo}}" alt="">
-                <p>{{v.brandName}}</p>
-            </a>
-        </li>
-        {{/each}}
-    </script>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.min.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/category.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
