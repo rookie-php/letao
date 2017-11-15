@@ -26,11 +26,17 @@ var tools = {
         }
         return obj;
     },
-    getParameterVal: function(key){
+    getParameterVal: function (key) {
         return this.getParameter()[key];
     },
-    checkLogin: function(data){
-        
+    checkLogin: function (data) {
+        if (data.error == 400) {
+            //说明未登录
+            mui.toast('你还未登录,即将跳转到登录页面');
+            setTimeout(function () {
+                location.href = "login.html?retUrl=" + location.href;
+            }, 1000)
+        }
     }
 }
 

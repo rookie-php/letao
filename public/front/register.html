@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <title>乐淘商城-登录</title>
+    <title>乐淘商城-注册</title>
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css" />
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/register.css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
@@ -21,25 +21,31 @@
             <a href="javascript:history.go(-1);" class="header-l">
                 <i class="mui-icon mui-icon-arrowleft"></i>
             </a>
-            <h4>登录</h4>
+            <h4>注册</h4>
         </div>
         <!-- 内容区域-->
         <div class="lt-content">
-            <form class="mui-input-group">
+            <form class="form">
                 <div class="mui-input-row">
-                    <label>用户名</label>
                     <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
                 </div>
                 <div class="mui-input-row">
-                    <label>密码</label>
                     <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
                 </div>
+                <div class="mui-input-row">
+                    <input type="password" name="repassword" class="mui-input-password" placeholder="请再次确认密码">
+                </div>
+                <div class="mui-input-row">
+                    <input type="text" name="mobile" class="mui-input-clear" placeholder="请输入手机号">
+                </div>
+                <div class="mui-input-row code">
+                    <input type="text" name="vCode" class="mui-input-clear" placeholder="请输入验证码">
+                    <button class="mui-btn mui-btn-blue getCode">获取验证码</button>
+                </div>
                 <div class="mui-button-row">
-                    <button type="button" class="mui-btn mui-btn-primary btn-login">登录</button>
-                    <button type="reset" class="mui-btn mui-btn-danger">重置</button>
+                    <button type="button" class="mui-btn mui-btn-blue lt-register">注册</button>
                 </div>
             </form>
-            <a href="register.html" class="lt-register">免费注册</a>
         </div>
         <!-- 页脚部分 -->
         <div class="lt-footer">
@@ -75,7 +81,7 @@
     <script src="lib/mui/js/mui.min.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
 </body>
 
 </html>

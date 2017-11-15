@@ -48,6 +48,7 @@ $(function () {
                         size: size
                     },
                     success: function(data){
+                        tools.checkLogin(data);
                         if(data.success){
 
                             //说明已经登录
@@ -57,13 +58,6 @@ $(function () {
                                     location.href = "shopcart.html";
                                 }
                             })
-                        }
-                        if(data.error==400){
-                            //说明未登录
-                            mui.toast('你还未登录,即将跳转到登录页面');
-                            setTimeout(function(){
-                                location.href = "login.html?retUrl="+location.href;
-                            },1000)
                         }
                     }
                 })

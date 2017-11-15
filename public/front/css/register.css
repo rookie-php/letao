@@ -1,0 +1,27 @@
+.form {
+    padding: 10px;
+}
+
+.form .code input{
+    width: 60%;
+}
+
+.form .getCode {
+    width: 36%;
+    padding: 10px;
+    background-color: #007aff;
+    border: 1px solid #007aff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.form .getCode.now {
+    background-color: #999;
+    border-color: #999;
+}
+
+.form .lt-register {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+}

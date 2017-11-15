@@ -13,15 +13,9 @@ $(function () {
                         type: 'get',
                         url: '/cart/queryCart',
                         success: function (data) {
+                            tools.checkLogin(data);
+                            
                             setTimeout(function () {
-                                if (data.error == 400) {
-                                    //说明未登录
-                                    mui.toast('你还未登录,即将跳转到登录页面');
-                                    setTimeout(function () {
-                                        location.href = "login.html?retUrl=" + location.href;
-                                    }, 1000)
-                                }
-                                // console.log(data);
                                 $('.mui-table-view').html(template('Tmp', {
                                     data: data
                                 }));

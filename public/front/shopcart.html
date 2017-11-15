@@ -72,6 +72,9 @@
     </div>
     <!-- 模版区域 -->
     <script type="text/html" id="Tmp">
+        {{if data.length==0}}
+        <p class="tips">亲!您的购物车是空的.您可以去搜索您喜欢的商品哦</p>
+        {{/if}}
         {{each data v i}}
         <li class="mui-table-view-cell">
             <div class="mui-slider-right mui-disabled">
